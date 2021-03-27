@@ -1,0 +1,121 @@
+<!-- 
+Raquel Grogan
+Created 3/2/2021
+Last Updated 3/2/2021
+Graphic Design Page For Jessica's Portfollio
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="utf-8">
+
+<title>
+Graphic Design
+</title>
+<link rel="stylesheet" type="text/css" href="CSS/graphicDesignSS.css">
+
+</head>
+
+<body>
+
+<ul class="homeNav">
+<li class="navLeft"><a class="homeNav" href="">  3D Animation  </a></li>
+<li class="navLeft"><a class="homeNav" href="">  Graphic Design  </a></li>
+<li class="navRight"><a class="homeNav" href="">  Upload an Image  </a></li>
+<li class="navRight"><a class="homeNav" href="">  Motion Graphics  </a></li>
+</ul>
+
+<h1>Jessica's Graphic Design</h1>
+<h2>PostCards</h2>
+<h3 id="postcards"></h3>
+<h2>Flyers</h2>
+<h3 id="flyers"></h3>
+
+<script>
+///////////////////////////////POSTCARDS//////////////////////////////////////
+var postText = '<img class="Postcards" style="margin:5px;" id="myImg" src="JessicaProjectPortfolio/Graphic Design/Postcards/Postcard_Op1_revise copy.png" alt="Fan into Flame Postcard 1" width="300" height="200">';
+
+var postArr = ["Postcard_Op2 copy","Postcard_Op3_Revise copy",
+"Postcard_Op4 copy","Postcard_Op5_Revise copy","Postcard_Op6 copy"];
+
+for(var i=0; i<postArr.length; i++){
+	postText += '<img class="Postcards" style="margin:5px;" id="myImg" src="JessicaProjectPortfolio/Graphic Design/Postcards/';
+	postText += postArr[i]+'.png" alt="Fan into Flame Postcard '+i+'" width="300" height="200">';
+}
+document.getElementById("postcards").innerHTML = postText;
+
+///////////////////////////////FLYERS////////////////////////////////////////
+var flyerText = '<img class="Flyers" style="margin:20px;" id="myImg" src="JessicaProjectPortfolio/Graphic Design/Flyers/Flyer_1 copy.png" alt="Fan into Flame Flyer 1" width="255" height="330">';
+
+var flyerArr = ["Flyer_2 copy","Flyer_3 copy","Flyer_4 copy","Flyer_5 copy","Flyer_6 copy",
+"InstaCountrySunrise copy","InstaOceanPersonpng copy","InstaSunriseLake copy","InstaSunsetFarHills copy","InstaUCOBottle copy"];
+
+for(var i=0; i<5; i++){
+	flyerText += '<img class="Flyers" style="margin:20px;" id="myImg" src="JessicaProjectPortfolio/Graphic Design/Flyers/';
+	flyerText += flyerArr[i]+'.png" alt="Fan into Flame Flyer '+i+'" width="255" height="330">';
+}
+for(var i=5; i<flyerArr.length; i++){
+	flyerText += '<img class="Flyers" style="margin:20px;" id="myImg" src="JessicaProjectPortfolio/Graphic Design/Flyers/';
+	flyerText += flyerArr[i]+'.png" alt="Fan into Flame Flyer '+i+'" width="360" height="360">';
+}
+document.getElementById("flyers").innerHTML = flyerText;
+</script>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+//postcard class
+var postcardImages = document.getElementsByClassName('Postcards');
+//flyer class
+var flyerImages = document.getElementsByClassName('Flyers');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < postcardImages.length; i++) {
+  var img = postcardImages[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+for (var i = 0; i < flyerImages.length; i++) {
+  var img = flyerImages[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+</script>
+
+
+
+</body>
+
+</html>
+
+<!--Sources:
+https://stackoverflow.com/questions/47798971/several-modal-images-on-page
+-->

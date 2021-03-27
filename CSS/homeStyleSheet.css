@@ -1,0 +1,38 @@
+/*
+Raquel Grogan
+Home Page Style Sheet
+Created 3/2/2021
+Last Updated 3/2/2021
+*/
+
+	ul.homeNav{
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  position:sticky;
+	  position: -webkit-sticky; 
+	  top:0;
+	  font-size:17px;
+	  font-family:Georgia, Helvetica, Arial;
+	  background-color: black;
+	}
+	li a.homeNav {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+	li.navLeft{
+		float:left;
+	}
+	li.navCenter{
+		float:center;
+	}
+	li.navRight{
+		float:right;
+	}
+	li a:hover {
+	  background-color: purple;
+	}
