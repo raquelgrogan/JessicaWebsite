@@ -1,0 +1,36 @@
+/*
+Raquel Grogan
+Motion Graphics Style Sheet
+Created 4/30/2021
+Last Updated 4/30/2021
+*/
+
+ul.Nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top:0;
+    font-size:17px;
+    font-family:Georgia, Helvetica, Arial;
+    background-color: black;
+  }
+  li a.Nav {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li.navLeft{
+      float:left;
+  }
+  li.navCenter{
+      float:center;
+  }
+  li.navRight{
+      float:right;
+  }
+  li a:hover {
+    background-color: purple;
+  }
