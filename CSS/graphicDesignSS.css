@@ -3,8 +3,8 @@
 	  margin: 0;
 	  padding: 0;
 	  overflow: hidden;
-	  position:sticky;
-	  position: -webkit-sticky; 
+	  /* position:sticky;
+	  position: -webkit-sticky;  */
 	  top:0;
 	  font-size:17px;
 	  font-family:Georgia, Helvetica, Arial;
